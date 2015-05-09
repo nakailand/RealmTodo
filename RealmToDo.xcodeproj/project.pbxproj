@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B9D5258080D8FD9981F703A /* libPods-RealmToDoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F62F9D9C3E2D8D7E647D8798 /* libPods-RealmToDoTests.a */; };
+		84C20CB41AFDB419006B73A2 /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C20CB31AFDB419006B73A2 /* RLMSupport.swift */; };
 		84E2D8B91AFBA99700DFD324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2D8B81AFBA99700DFD324 /* AppDelegate.swift */; };
 		84E2D8BB1AFBA99700DFD324 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2D8BA1AFBA99700DFD324 /* ViewController.swift */; };
 		84E2D8BE1AFBA99700DFD324 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E2D8BC1AFBA99700DFD324 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		1989FFAC2BB73F4CF5165D61 /* Pods-RealmToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmToDo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmToDo/Pods-RealmToDo.release.xcconfig"; sourceTree = "<group>"; };
 		2663E9DD7F6772ACB33EC450 /* Pods-RealmToDoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmToDoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmToDoTests/Pods-RealmToDoTests.release.xcconfig"; sourceTree = "<group>"; };
+		84C20CB31AFDB419006B73A2 /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
 		84E2D8B31AFBA99700DFD324 /* RealmToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E2D8B71AFBA99700DFD324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E2D8B81AFBA99700DFD324 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				84E2D8BA1AFBA99700DFD324 /* ViewController.swift */,
 				84E2D8BC1AFBA99700DFD324 /* Main.storyboard */,
 				84E2D8D91AFBABC400DFD324 /* AddViewController.swift */,
+				84C20CB31AFDB419006B73A2 /* RLMSupport.swift */,
 				84E2D8BF1AFBA99700DFD324 /* Images.xcassets */,
 				84E2D8C11AFBA99700DFD324 /* LaunchScreen.xib */,
 				84E2D8D81AFBAA0400DFD324 /* RealmTodo-Bridging-Header.h */,
@@ -319,6 +322,7 @@
 				84E2D8BB1AFBA99700DFD324 /* ViewController.swift in Sources */,
 				84E2D8B91AFBA99700DFD324 /* AppDelegate.swift in Sources */,
 				84E2D8DA1AFBABC400DFD324 /* AddViewController.swift in Sources */,
+				84C20CB41AFDB419006B73A2 /* RLMSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +453,7 @@
 				INFOPLIST_FILE = RealmToDo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "RealmToDo/RealmTodo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/RealmToDo-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -461,7 +465,7 @@
 				INFOPLIST_FILE = RealmToDo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "RealmToDo/RealmTodo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/RealmToDo-Bridging-Header.h";
 			};
 			name = Release;
 		};
