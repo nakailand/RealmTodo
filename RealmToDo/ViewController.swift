@@ -120,6 +120,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.reloadData()
     }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            var todoItem: ToDoItem?
+            
+            switch indexPath.section {
+            case 0:
+                todoItem = todos.objectAtIndex(UInt(indexPath.row)) as? ToDoItem
+            case 1:
+                todoItem = finished.objectAtIndex(UInt(indexPath.row)) as? ToDoItem
+            default:
+                break
+            }
+            
+            let realm = RLMRealm.defaultRealm()
+            realm.transactionWithBlock() {
+                realm.deleteObject(todoItem)
+            }
+            tableView.reloadData()
+        }
+    }
+    
     func didFinishTypingText(typedText: String?) {
         if typedText != "" {
             
